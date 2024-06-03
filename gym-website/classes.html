@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="classes.css">
+</head>
+<body>
+    <nav>
+        <div class="logo"><img src="images/logo2.png" alt="Gym Logo"></div>
+        <div class="menu-icon" id="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="nav-list" id="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="classes.html">Classes</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><button class="nav-button">Sign Up</button></li>
+        </ul>
+    </nav>
+
+
+     <!-------------------------------------signup form------------------------->
+     <button class="nav-button">Sign Up</button>
+
+     <!----------------------- Sign Up Popup Form ------------------------->
+     <div id="signup-popup" class="popup">
+         <div class="popup-content">
+             <span class="close-btn">&times;</span>
+             <h2 class="popup-header">SUBSCRIPTION PLAN</h2>
+             <form id="signup-form">
+                 <div class="input-group">
+                     <label for="name" class="input-label">Full Name:</label>
+                     <input type="text" id="name" name="name" class="input-field" required>
+                 </div>
+                 <div class="input-group">
+                     <label for="email" class="input-label">Email:</label>
+                     <input type="email" id="email" name="email" class="input-field" required>
+                 </div>
+                 <div class="input-group">
+                     <label for="mobile" class="input-label">Mobile Number:</label>
+                     <input type="text" id="mobile" name="mobile" class="input-field" required>
+                 </div>
+                 <div class="radio-group">
+                     <label class="input-label">Duration:</label>
+                     <input type="radio" id="monthly" name="duration" value="monthly">
+                     <label for="monthly">Monthly</label>
+                     <input type="radio" id="yearly" name="duration" value="yearly">
+                     <label for="yearly">Yearly</label>
+                 </div>
+                 <div class="radio-group">
+                     <label class="input-label">Mode of Payment:</label>
+                     <input type="radio" id="cash" name="payment" value="cash">
+                     <label for="cash">Cash</label>
+                     <input type="radio" id="online" name="payment" value="online">
+                     <label for="online">Online</label>
+                 </div>
+                 <div class="radio-group">
+                     <label class="input-label">Personal Training: <span>*free with yearly plan</span></label>
+                     <input type="radio" id="required" name="training" value="required">
+                     <label for="required">Required</label>
+                     <input type="radio" id="not-required" name="training" value="not-required">
+                     <label for="not-required">Not Required</label>
+                 </div>
+                 <div class="checkbox-group">
+                     <input type="checkbox" id="terms" name="terms" required>
+                     <label for="terms" class="terms-label">I accept all terms and conditions provided in this form.</label>
+                 </div>
+                 <button type="submit" class="submit-btn">BUY PLAN</button>
+             </form>
+         </div>
+     </div>
+    <!-----------------------classes--------------------------->
+    <section class="classes-section">
+        <div class="classes-overlay">
+            <h2 class="classes-heading">Our Classes</h2>
+            <hr class="heading-underline">
+            <div class="classes-container">
+                <div class="class-item">
+                    <img src="images/gym1.jpg" alt="Class 1" class="class-image">
+                    <div class="class-info">
+                        <p class="class-time">6:30 – 7:30 AM</p>
+                        <button class="class-button">Power Excello</button>
+                    </div>
+                </div>
+                <div class="class-item">
+                    <img src="images/gym8.png" alt="Class 2" class="class-image">
+                    <div class="class-info">
+                        <p class="class-time">6:30 – 7:30 AM</p>
+                        <button class="class-button">Mixed-Level Excello</button>
+                    </div>
+                </div>
+                <div class="class-item">
+                    <img src="images/gym3.jpg" alt="Class 3" class="class-image">
+                    <div class="class-info">
+                        <p class="class-time">6:30 – 7:30 AM</p>
+                        <button class="class-button">Beginner Level</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="training-partners">
+        <h2>Our Training Partners</h2>
+        <div class="partners-container">
+            <div class="partner-card">
+                <img src="images/john smith.jpg" alt="John Smith">
+                <p>John Smith</p>
+            </div>
+            <div class="partner-card">
+                <img src="images/anisloius.jpg" alt="Anais Louis">
+                <p>Anais Louis</p>
+            </div>
+            <div class="partner-card">
+                <img src="images/phill2.jpg" alt="Phil Heath">
+                <p>Phil Heath</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-------------Image carousel------------->
+    <section class="image-section">
+        <!--<button class="angular-button prev">&lt;</button> -->
+        <button class="angular-button prev" onclick="prevSlide()">❮</button>
+        <div class="image-container">
+            <img class="image-slide" src="images/car1.jpg" alt="Fitness Class">
+            <img class="image-slide" src="images/car2.jpg" alt="Yoga Class">
+            <img class="image-slide" src="images/car3.jpg" alt="Spinning Class">
+        </div>
+        <button class="angular-button next" onclick="nextSlide()">❯</button>
+    </section>
+
+
+
+
+    <!--------------------Footer Section---------------------->
+<section class="footer">
+    <div class="footer-box logo-box">
+        <img src="images/logo2.png" alt="Logo" class="footer-logo">
+        <h3 class="footer-description">Prioritize Your Fitness Goals <br> with our world class services</h3>
+    </div>
+    <div class="footer-box">
+        <h2 class="footer-heading">COMPANY</h2>
+        <a href="#" class="footer-link">About</a>
+        <a href="#" class="footer-link">Careers</a>
+        <a href="#" class="footer-link">Blogs</a>
+        <button class="footer-btn">Membership</button>
+        <button class="footer-btn">Customer Service</button>
+    </div>
+    <div class="footer-box">
+        <h2 class="footer-heading">CONTACT</h2>
+        <a href="#" class="footer-link">Help/FAQs</a>
+        <a href="#" class="footer-link">Press</a>
+        <a href="#" class="footer-link">Mobile</a>
+    </div>
+    <div class="footer-box">
+        <h2 class="footer-heading">MORE</h2>
+        <a href="#" class="footer-link">Program</a>
+        <a href="#" class="footer-link">Plans</a>
+        <a href="#" class="footer-link">Method</a>
+    </div>
+    <div class="footer-box popular-tags-box">
+        <h2 class="footer-heading" style="color: rgba(255, 165, 0, 1);"><u>Popular Tags</u></h2>
+        <div class="tag-buttons">
+            <button class="tag-btn">ABS</button>
+            <button class="tag-btn">Workout</button>
+            <button class="tag-btn highlight">Nutrition</button>
+            <button class="tag-btn">GYM</button>
+            <button class="tag-btn">Boxing</button>
+            <button class="tag-btn highlight">Trainers</button>
+        </div>
+        <button class="tag-btn highlight center-btn">Facilities</button>
+    </div>
+
+    <div class="social-icons-footer">
+        <img src="images/wh3.png" class="social-icon" alt="WhatsApp Icon">
+        <img src="images/fb3.png" class="social-icon" alt="Facebook Icon">
+        <img src="images/you3.png" class="social-icon" alt="YouTube Icon">
+        <img src="images/tw3.png" class="social-icon" alt="Twitter Icon">
+    </div>
+</section>
+<div class="footer-copyright">
+    <p><b>&copy;   2024 Fitness Star Gym pvt ltd</b></p>
+</div>
+
+
+
+    <script src="script.js"></script>
+    
+
+</body>
+</html>
+
+
+
+
